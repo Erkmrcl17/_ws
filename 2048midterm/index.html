@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="2048.css">
+</head>
+<body>
+    <div class="auth-container" id="authContainer">
+        <div class="auth-form" id="loginForm">
+            <h2>2048</h2>
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="toggleForms()">Register</a></p>
+        </div>
+        
+        <div class="auth-form hidden" id="registerForm">
+            <h2>2048</h2>
+            <input type="text" id="registerUsername" placeholder="Username">
+            <input type="password" id="registerPassword" placeholder="Password">
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+        </div>
+    </div>
+
+    <div class="game-container" id="gameContainer">
+        <div class="container">
+            <div class="header">
+                <button onclick="logout()">Logout</button>
+            </div>
+            <h1>2048</h1>
+            <div class="score-container">
+                Score: <span id="score">0</span>
+                <div>High Score: <span id="highScore">0</span></div>
+            </div>
+            <div class="grid"></div>
+            <button id="new-game">New Game</button>
+        </div>
+
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <div id="leaderboardList"></div>
+        </div>
+    </div>
+    <script src="2048.js"></script>
+</body>
+</html>
